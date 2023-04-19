@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veprimtari</title>
+	<style>
+		body {
+			background-color: pink;
+		}
+		form {
+			display: flex;
+			flex-direction: row;
+			justify-content: left;
+			flex-wrap: wrap;
+		}
+		
+	</style>
+</head>
+<body>
+	<form>
+		
+		<p>Shkruaj Mish, Vaj ose Oriz ne fushen e hyrjes dhe kliko butonin.</p>
+		<input type="text" id="input" name="input">
+		<input type="button" value="Provoje" onclick="myFunction()">
+	</form>
+
+	<p id="output"></p>
+
+	<script>
+		function myFunction() {
+			var input = document.getElementById("input").value;
+			var output = document.getElementById("output");
+
+			if (input.toLowerCase() == "mish") {
+				output.innerHTML = "Paske oreks!";
+			} else if (input.toLowerCase() == "vaj") {
+				output.innerHTML = "Ska vaj!!";
+			} else if (input.toLowerCase() == "oriz") {
+				output.innerHTML = "Duket qe nuk te hahet gje!!!";
+			} else {
+				output.innerHTML = "Shkruaj Mish, Vaj ose Oriz.";
+			}
+		}
+	</script>
+</body>
+</html>
